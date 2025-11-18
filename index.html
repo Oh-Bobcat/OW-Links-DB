@@ -120,11 +120,12 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 0.4rem;
+      margin-top: 0.15rem;
     }
 
     .skin-title {
-      font-size: 1rem;
-      font-weight: 600;
+      font-size: 1.05rem;
+      font-weight: 650;
     }
 
     .rarity-pill {
@@ -298,10 +299,10 @@
     </p>
   </div>
 
-  <!-- Load your items from data.js -->
+  <!-- Load your big items array -->
   <script src="data.js"></script>
 
-  <!-- Rendering Logic -->
+  <!-- Main logic -->
   <script>
     const heroFilter = document.getElementById("heroFilter");
     const typeFilter = document.getElementById("typeFilter");
@@ -449,7 +450,8 @@
         openBtn.textContent = "Open in Battle.net";
 
         const copyBtn = document.createElement("button");
-        copyBtn.className = "btn-secondary btn";
+        copyBtn.className = "btn btn-secondary";
+        copyBtn.type = "button";
         copyBtn.textContent = "Copy link";
 
         copyBtn.addEventListener("click", async () => {
@@ -459,7 +461,7 @@
             copyBtn.textContent = "Copied!";
             setTimeout(() => (copyBtn.textContent = oldText), 1000);
           } catch (err) {
-            alert("Could not copy. Link:\n" + item.url);
+            alert("Could not copy automatically. Here is the link:\n" + item.url);
           }
         });
 
