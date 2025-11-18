@@ -404,6 +404,20 @@
       filtered.forEach((item) => {
         const card = document.createElement("article");
         card.className = "card";
+        
+// Optional image at top of card
+if (item.imageUrl) {
+  const imgWrap = document.createElement("div");
+  imgWrap.className = "card-image-wrapper";
+
+  const img = document.createElement("img");
+  img.className = "card-image";
+  img.src = item.imageUrl;
+  img.alt = (item.hero || "") + " - " + (item.name || "");
+
+  imgWrap.appendChild(img);
+  card.appendChild(imgWrap);
+}
 
         const heroLine = document.createElement("div");
         heroLine.className = "hero-line";
@@ -512,4 +526,5 @@
   </script>
 </body>
 </html>
+
 
