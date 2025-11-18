@@ -10,6 +10,7 @@ const items = [
     notes: "Legendary Ashe skin not visible in the in-game Hero Gallery. Direct shop checkout.",
     priceCoins: 1900,
     priceLabel: "1,900 Coins",
-    tags: ["Shop-only", "Example"]
+    tags: ["Shop-only", "Example"],
+    imageUrl: "https://static.wikia.nocookie.net/overwatch_gamepedia/images/a/ab/Ashe_Skin_Raijin.png/revision/latest?cb=20230311233706"
   }
 ];
