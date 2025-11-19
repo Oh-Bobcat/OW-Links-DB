@@ -1,4 +1,4 @@
-const items = [
+icconst items = [
   {
     hero: "Ashe",
     name: "Raijin",
@@ -21,23 +21,27 @@ const items = [
     url: "https://us.checkout.battle.net/shop/en/checkout/buy/877738",
     region: "US",
     event: "Shop",
-    notes: "Rare Ana skin available through the shop.",
+    notes: "Available through the Hero Gallery.",
     priceCoins: 75,
     priceLabel: "75 Coins",
     tags: ["Shop", "Hero Gallery"],
   },
 
   {
+    {
     hero: "Bastion",
     name: "Overwatch World Cup Away",
     type: "Skin",
-    rarity: "Legendary",
+    rarity: "Epic",
     url: "https://us.checkout.battle.net/shop/en/checkout/buy/1314624",
     region: "US",
     event: "Overwatch World Cup",
-    notes: "Legendary Bastion World Cup skin.",
+    notes: "Available during the 2023 World Cup.",
     priceCoins: 1000,
     priceLabel: "1,000 Coins",
-    tags: ["Event"],
+    tags: ["Shop Only"],
+    isActive: false
+},
+
   },
 ];
