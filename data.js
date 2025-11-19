@@ -11,6 +11,5 @@ const items = [
     priceCoins: 1900,
     priceLabel: "1,900 Coins",
     tags: ["Shop-only", "Example"],
-
   }
 ];
