@@ -1,4 +1,4 @@
-icconst items = [
+const items = [
   {
     hero: "Ashe",
     name: "Raijin",
@@ -28,7 +28,6 @@ icconst items = [
   },
 
   {
-    {
     hero: "Bastion",
     name: "Overwatch World Cup Away",
     type: "Skin",
@@ -40,8 +39,6 @@ icconst items = [
     priceCoins: 1000,
     priceLabel: "1,000 Coins",
     tags: ["Shop Only"],
-    isActive: false
-},
-
+    isActive: false,
   },
 ];
