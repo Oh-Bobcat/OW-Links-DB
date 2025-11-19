@@ -10,6 +10,34 @@ const items = [
     notes: "Sometimes available in the Shop.",
     priceCoins: 1900,
     priceLabel: "1,900 Coins",
-    tags: ["Shop Only"],
-  }
+    tags: ["Shop"],
+  },
+
+  {
+    hero: "Ana",
+    name: "Turquoise",
+    type: "Skin",
+    rarity: "Rare",
+    url: "https://us.checkout.battle.net/shop/en/checkout/buy/877738",
+    region: "US",
+    event: "Shop",
+    notes: "Rare Ana skin available through the shop.",
+    priceCoins: 75,
+    priceLabel: "75 Coins",
+    tags: ["Shop", "Hero Gallery"],
+  },
+
+  {
+    hero: "Bastion",
+    name: "Overwatch World Cup Away",
+    type: "Skin",
+    rarity: "Legendary",
+    url: "https://us.checkout.battle.net/shop/en/checkout/buy/1314624",
+    region: "US",
+    event: "Overwatch World Cup",
+    notes: "Legendary Bastion World Cup skin.",
+    priceCoins: 1000,
+    priceLabel: "1,000 Coins",
+    tags: ["Event"],
+  },
 ];
