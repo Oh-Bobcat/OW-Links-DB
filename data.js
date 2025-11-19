@@ -11,7 +11,6 @@ const items = [
     priceCoins: 1900,
     priceLabel: "1,900 Coins",
     tags: ["Shop-only", "Example"],
-    imageUrl: "https://via.placeholder.com/400x225/020617/ffffff?text=Ashe+Raijin"
 
   }
 ];
