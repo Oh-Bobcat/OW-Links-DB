@@ -99,6 +99,53 @@
       gap: 0.35rem;
     }
 
+    /* Collapsible "Inactive" section */
+.inactive-section {
+  margin-top: 1.5rem;
+}
+
+.inactive-wrapper {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+}
+
+.inactive-wrapper > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #e5e7eb;
+}
+
+.inactive-wrapper[open] > summary {
+  border-bottom: 1px solid rgba(55, 65, 81, 0.9);
+}
+
+.inactive-count-badge {
+  font-size: 0.75rem;
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(239, 68, 68, 0.16);
+  border: 1px solid rgba(248, 113, 113, 0.9);
+  color: #fecaca;
+}
+
+/* Slightly dim inactive cards and mute the main button */
+.card-inactive {
+  opacity: 0.75;
+}
+
+.card-inactive .btn-primary {
+  background: linear-gradient(135deg, #6b7280, #4b5563);
+  color: #e5e7eb;
+  box-shadow: none;
+}
+
     .card-image-wrapper {
   margin: -0.9rem -1rem 0.6rem;
   overflow: hidden;
@@ -315,7 +362,20 @@
 
     <section id="cardsGrid" class="grid"></section>
 
-    <p class="footer-note">
+<section class="inactive-section">
+  <details id="inactiveWrapper" class="inactive-wrapper">
+    <summary>
+      Inactive cosmetics
+      <span class="inactive-count-badge">
+        <span id="inactiveCount">0</span>
+      </span>
+    </summary>
+    <div id="inactiveGrid" class="grid"></div>
+  </details>
+</section>
+
+<p class="footer-note">
+
       Unofficial fan project. All Blizzard assets and names are property of Blizzard Entertainment.
       This site only provides direct links to official Blizzard checkout pages.
     </p>
@@ -535,6 +595,7 @@ if (item.imageUrl) {
   </script>
 </body>
 </html>
+
 
 
 
