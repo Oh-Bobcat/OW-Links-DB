@@ -10,6 +10,6 @@ const items = [
     notes: "Sometimes available in the Shop.",
     priceCoins: 1900,
     priceLabel: "1,900 Coins",
-    tags: ["Shop-only", "Example"],
+    tags: ["Shop Only"],
   }
 ];
