@@ -381,10 +381,8 @@
     </p>
   </div>
 
-  <!-- Load your big items array -->
   <script src="data.js"></script>
 
-  <!-- Main logic -->
   <script>
     const heroFilter = document.getElementById("heroFilter");
     const typeFilter = document.getElementById("typeFilter");
@@ -436,31 +434,27 @@
       const rarityValue = rarityFilter.value;
 
       let filtered = items.filter((item) => {
-        if (heroValue !== "all" && item.hero !== heroValue) return false;
-        if (typeValue !== "all" && item.type !== typeValue) return false;
-        if (rarityValue !== "all" && item.rarity !== rarityValue) return false;
+    if (item.isActive === false) return false;
 
-        if (query) {
-          const blob = [
+    if (heroValue !== "all" && item.hero !== heroValue) return false;
+    if (typeValue !== "all" && item.type !== typeValue) return false;
+    if (rarityValue !== "all" && item.rarity !== rarityValue) return false;
+
+    if (query) {
+        const blob = [
             item.hero,
             item.name,
             item.type,
             item.rarity,
             item.region,
             item.event,
-            item.notes,
-            item.priceLabel,
-            (item.tags || []).join(" "),
-            item.url
-          ]
-            .join(" ")
-            .toLowerCase();
+            item.priceLabel
+        ].join(" ").toLowerCase();
+        if (!blob.includes(query)) return false;
+    }
+    return true;
+});
 
-          if (!blob.includes(query)) return false;
-        }
-
-        return true;
-      });
 
       filtered.sort((a, b) => {
         const heroCompare = (a.hero || "").localeCompare(b.hero || "");
@@ -474,7 +468,6 @@
         const card = document.createElement("article");
         card.className = "card";
         
-// Optional image at top of card
 if (item.imageUrl) {
   const imgWrap = document.createElement("div");
   imgWrap.className = "card-image-wrapper";
@@ -637,6 +630,7 @@ if (inactiveItems.length > 0) {
   </script>
 </body>
 </html>
+
 
 
 
